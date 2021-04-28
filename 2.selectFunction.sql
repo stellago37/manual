@@ -90,18 +90,6 @@ select ename, job from emp where job = upper('manager');
 -- *** 자바스크립트, 파이썬, 자바에서의 문자열 index(각음절의 위치 순서)는 0부터 시작, sql에선 1부터 시작
 
 
-
-/* 참고
-1. java는 문자열 index로 표현시 0부터 절대적으로 시작
-2. oracle db 11xe의 문자열, date 타입의 index 표현시 0과 1을 같다고 간주
-   - 에러 발생은 아님 
-*/
--- substr(데이터, 시작위치, 추출할개수)
--- '엔코아 플레이데이터' 문자열에서 '플레이데이터'만 착출하기
-select '엔코아 플레이데이터' from dual;
-select substr('엔코아 플레이데이터', 0, 1) from dual;
-
-
 --6. ? 년도 구분없이 2월에 입사한 사원이름(ename), 입사일(hiredate) 검색
 -- date 타입에도 substr() 함수 사용 가능 
 select hiredate from emp;
